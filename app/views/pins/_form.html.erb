@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: pin) do |form| %>
   <% if pin.errors.any? %>
     <div style="color: red">
@@ -12,11 +14,12 @@
   <% end %>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.label :description, style: "display: block" ,class:"form-label" %>
+    <%= form.text_field :description ,class:"form-control" %>
   </div>
+  <br>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit",class:"btn btn-primary btn-sm"%>
   </div>
 <% end %>
